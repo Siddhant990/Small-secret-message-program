@@ -1,0 +1,19 @@
+import random
+import string
+
+condition =int(input("Press 1 for Encoding\nPress 2 for Decoding\n:"))
+
+if condition==1:
+    message = input("Enter your message!!")
+    Encoded=(''.join(random.choices(string.ascii_lowercase, k=3)))+message+(''.join(random.choices(string.ascii_lowercase, k=3)))
+    print("Your Encoded message is:",Encoded)
+    
+
+elif condition==2:
+    message2=input("Enter your message to decode:")
+    Decoded=message2[3:-3]
+    print("Your decoded message is:",Decoded)
+
+
+else:
+    print("Invalid Input!!!!")
